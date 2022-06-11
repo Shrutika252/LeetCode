@@ -1,7 +1,5 @@
 class Solution(object):
     def multiply(self, num1, num2):
-        a=int(num1)
-        b=int(num2)
-        c=a*b
+        c=int(num1)*int(num2)
         return str(c)
         
