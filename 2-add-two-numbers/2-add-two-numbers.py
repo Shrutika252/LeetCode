@@ -8,33 +8,32 @@ class Solution(object):
         newList = ListNode()
         p = newList
         
-        L1_list = ""
-        L2_list = ""
-        Sum = []
-        Result = []
+        num1=''
+        num2=''
+        res=[]
+        result=''
+        final=[]
         
-        while l1 != None:
-            L1_list = str(l1.val) + L1_list 
-            l1 = l1.next
-        
-        while l2 != None:
-            L2_list = str(l2.val) + L2_list 
-            l2 = l2.next
-        
-        Sum =(int(L1_list) + int(L2_list))
-        
-        Sum = str(Sum)
-        Sum = list(Sum[::-1])
-
-        
-        out = ListNode()   
-        current = out
-        for num in Sum:
-            temp = ListNode()   
-            temp.val = int(num)
-            current.next = temp
-            current = current.next
+        while l1!=None:
+            num1=str(l1.val)+num1
+            l1=l1.next
             
-       
-        return out.next
-       
+        while l2!=None:
+            num2=str(l2.val)+num2
+            l2=l2.next
+            
+        res=(int(num1)+int(num2))
+        result=str(res)
+        final=list(result[::-1])
+        
+        
+        firstnode=ListNode()
+        current=firstnode
+        
+        for i in final:
+            temp=ListNode()
+            temp.val=int(i)
+            current.next=temp
+            current=current.next
+            
+        return firstnode.next
