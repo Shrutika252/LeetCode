@@ -5,8 +5,7 @@
 #         self.next = next
 class Solution(object):
     def addTwoNumbers(self, l1, l2):
-        newList = ListNode()
-        p = newList
+       
         
         num1=''
         num2=''
