@@ -1,3 +1,4 @@
 class Solution(object):
     def findMin(self, nums):
-        return min(nums)
+        nums.sort()
+        return nums[0]
