@@ -2,9 +2,7 @@ import math
 class Solution(object):
     def validSquare(self, p1, p2, p3, p4):
         final=[]
-        
-        if p1==0 and p2==0 and p3==0 and p4==0:
-            return False
+
         def distance(x,y):
             return math.sqrt((y[0] - x[0])**2 + (y[1] - x[1])**2)
         
