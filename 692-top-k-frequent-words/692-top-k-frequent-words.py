@@ -3,7 +3,6 @@ class Solution:
     def topKFrequent(self, words: List[str], k: int) -> List[str]:
         dict1=Counter(words)
         sort_dict=dict(sorted(dict1.items()))
-        print(sort_dict)
         
         res=[]
      
