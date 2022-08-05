@@ -19,7 +19,7 @@ class MyQueue:
         
         
     
-        print(self.s1)
+       
         
     
     def pop(self) -> int:
