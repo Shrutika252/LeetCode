@@ -19,16 +19,11 @@ class Solution:
                     hold[i] = '0'
                     break
             
-            
-            print(hold)
             for j in hold:
                 res=res+j
                 
             return int("".join(res))
-                
-                    
-
-            
+                 
             
         elif num<0:
             for i in temp:
