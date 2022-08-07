@@ -1,13 +1,7 @@
 class Solution:
     def repeatedSubstringPattern(self, s: str) -> bool:
+        ans=s[1:]+s[:-1]
         
-        ans=''
-        for i in s:
-            ans=ans+i
-            if s.count(ans)*len(ans)==len(s) and len(ans)!=len(s):
-                return True
-        
-        return False
-        
+        return s in ans
         
        
