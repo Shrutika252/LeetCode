@@ -8,8 +8,9 @@ class Solution:
         if len(nums)==1:
             return [nums]
         
-        return [
-            [num] + r 
+        res=[[num] + r 
 			for i, num in enumerate(nums) 
-            for r in self.permute(nums[:i] + nums[i+1:])
-        ]
+            for r in self.permute(nums[:i] + nums[i+1:])]
+        
+        return res
+        
