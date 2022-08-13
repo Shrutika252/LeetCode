@@ -1,9 +1,14 @@
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         res=[]
+        first_index=0
         last_index=0
         if target in nums:
-            first_index=nums.index(target)
+            for i in range(len(nums)):
+                if nums[i]==target:
+                    first_index=i
+                    break
+                    
             
             
             for i in range(len(nums)):
