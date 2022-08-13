@@ -1,17 +1,27 @@
-class Solution(object):
-    def searchRange(self, nums, target):
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
         res=[]
-
+        last_index=0
         if target in nums:
-            res.append(nums.index(target))
+            first_index=nums.index(target)
+            
+            
+            for i in range(len(nums)):
+                if nums[i]==target:
+                    last_index=i
+                    
+            res.append(first_index)
+            res.append(last_index)
+            
+            return res
         
-            nums.reverse()
-            temp = nums.index(target)
-            index=(len(nums) - temp - 1)
-            res.append(index)
-            
         else:
-            res.append(-1)
-            res.append(-1)
-            
-        return res
+            return [-1,-1]
+
+
+       
+    
+        
+        
+        
+        
